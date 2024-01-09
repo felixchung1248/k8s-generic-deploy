@@ -25,7 +25,7 @@ pipeline {
 
 				script {
 					// Create a new temporary directory
-					def tempDir = "${WORKSPACE}/temp"
+					def tempDir = "${WORKSPACE}/chart"
 					sh "mkdir -p ${tempDir}"
 		
 					// Checkout the code into the temporary directory
