@@ -25,7 +25,7 @@ pipeline {
 
 				script {
 					// Create a new temporary directory
-					def tempDir = "${WORKSPACE}/temp_${env.BUILD_ID}"
+					def tempDir = "${WORKSPACE}/temp"
 					sh "mkdir -p ${tempDir}"
 		
 					// Checkout the code into the temporary directory

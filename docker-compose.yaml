@@ -5,5 +5,5 @@ services:
         # command: sh -c "cp -r /app/* . && terraform init -backend-config="key=prod.${REPOSITORY}.tfstate" && terraform apply --auto-approve"
         command: sh -c "pwd && ls -l"
         volumes: 
-            - .:/app
+            - ./temp:/app
         working_dir: /app
