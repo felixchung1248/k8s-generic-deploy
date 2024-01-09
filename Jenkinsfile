@@ -22,7 +22,17 @@ pipeline {
 		stage('Checkout code') {
             steps {
                 // Checkout the code from the specified Git repository and branch
-                git url: env.GIT_REPO
+
+				script {
+					// Create a new temporary directory
+					def tempDir = "${WORKSPACE}/temp_${env.BUILD_ID}"
+					sh "mkdir -p ${tempDir}"
+		
+					// Checkout the code into the temporary directory
+					dir(tempDir) {
+						git url: env.GIT_REPO
+					}
+				}
             }
         }
 		
