@@ -1,7 +1,7 @@
 version: '3.8'
 services:
     tf:
-        image: datamgmtdemo01.eastasia.cloudapp.azure.com:30003/demo_project_01/demo-golden:27
+        image: dataopennesscommunity/demo-golden
         command: sh -c "cp -r /chart/main.tf . && terraform init -backend-config="key=prod.tfstate" && terraform apply --auto-approve"
         # command: sh -c "pwd && ls -l"
         volumes: 
