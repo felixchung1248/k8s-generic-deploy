@@ -40,7 +40,7 @@ pipeline {
             steps {
                 script {
                     // Deploy the application using docker-compose
-					sh "ls -l && docker compose -f ${env.WORKSPACE}/docker-compose.yaml up"
+					sh "tree && docker compose -f ${env.WORKSPACE}/docker-compose.yaml up"
                 }
             }
         }
